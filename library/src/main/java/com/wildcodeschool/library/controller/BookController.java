@@ -45,7 +45,7 @@ public class BookController {
         if (book.getDescription() != null) {
             bookToUpdate.setDescription(book.getDescription());
         }
-        return bookRepository.save(book);
+        return bookRepository.save(bookToUpdate);
     }
 
     @PostMapping("/books")
