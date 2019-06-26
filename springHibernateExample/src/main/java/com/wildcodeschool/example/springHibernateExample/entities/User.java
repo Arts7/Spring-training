@@ -8,7 +8,8 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String firstName;
@@ -33,8 +34,6 @@ public class User {
         this.age = age;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
